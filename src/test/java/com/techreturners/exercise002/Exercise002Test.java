@@ -2,7 +2,6 @@ package com.techreturners.exercise002;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class Exercise002Test {
@@ -19,14 +18,13 @@ public class Exercise002Test {
     }
 
     @Test
-    @Ignore
     public void checkCanWatchFilm() {
         Exercise002 ex002 = new Exercise002();
 
         Person p1 = new Person("Peter", "Smith", "Manchester", 17);
         Person p2 = new Person("Francis", "Farmer", "Leeds", 18);
 
-        assertEquals(false, ex002.canWatchFilm(/* p1, 18 */ ));
-        assertEquals(true, ex002.canWatchFilm(/* p2, 18 */ ));
+        assertEquals(false, ex002.canWatchFilm(p1, 18));
+        assertEquals(true, ex002.canWatchFilm(p2, 18));
     }
 }
