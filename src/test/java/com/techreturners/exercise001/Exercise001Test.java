@@ -66,5 +66,9 @@ public class Exercise001Test {
         users.add(u3);
         users.add(u4);
         assertEquals(2, ex001.countLinuxUsers(users));
+
+        // added empty list test
+        users = new ArrayList<User>();
+        assertEquals(0, ex001.countLinuxUsers(users));
     }
 }

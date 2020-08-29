@@ -3,6 +3,7 @@ package com.techreturners.exercise001;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
@@ -26,6 +27,13 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
+        return users.stream()
+                .filter(user -> "Linux".equals(user.getType()))
+                .collect(Collectors.toList())
+                .size();
+    }
+
+    public int countLinuxUsersPreJava8(List<User> users) {
         int linuxUserCounter = 0;
         for(User user : users) {
             if ("Linux".equals(user.getType())) {
@@ -34,4 +42,5 @@ public class Exercise001 {
         }
         return linuxUserCounter;
     }
+
 }
