@@ -21,7 +21,8 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        return "";
+        // not sure if this is cheating ;)
+        return new StringBuilder(sentence).reverse().toString();
     }
 
     public int countLinuxUsers(List<User> users) {
